@@ -1,0 +1,81 @@
+/* =============================================
+   Live Canvas Renderer — Animation Styles
+   ============================================= */
+
+/* Fade-in-up animation for comment bubbles */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.35s ease-out both;
+}
+
+/* Staggered comment entry delays */
+.animate-fade-in-up:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.animate-fade-in-up:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.animate-fade-in-up:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+/* Cursor blink for typewriter effect */
+@keyframes cursor-blink {
+  0%, 100% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: currentColor;
+  }
+}
+
+.typewriter-cursor {
+  border-right: 2px solid currentColor;
+  animation: cursor-blink 0.8s step-end infinite;
+}
+
+/* Smooth subtitle transition */
+.subtitle-overlay {
+  transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Overlay hover highlight (editor mode) */
+.overlay-editable {
+  outline: 1px dashed transparent;
+  transition: outline-color 0.2s ease;
+}
+
+.overlay-editable:hover {
+  outline-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Live badge pulse glow */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+  }
+}
+
+.live-badge-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Gradient preview transitions */
+.bg-preview-transition {
+  transition: background 0.3s ease;
+}
